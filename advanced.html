@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorial // Mathematical Computation Engine</title>
+
+</head>
+
+<body>
+  <canvas id="matrix-canvas"></canvas>
+
+  <header>
+    <div class="glitch-wrapper">
+      <h1 data-text="FACTORIAL">FACTORIAL</h1>
+    </div>
+    <div class="subtitle">Computational Mathematics Engine v2.0</div>
+  </header>
+
+  <div class="container">
+    <div class="main-interface">
+      <div class="input-section">
+        <span class="section-label">// Input Parameters</span>
+        <div class="input-wrapper">
+          <input type="number" id="numberInput" placeholder="0" min="0" max="170" value="5">
+          <button class="compute-btn" onclick="calculateFactorial()">Initialize Computation</button>
+          <div class="loading-bar" id="loadingBar">
+            <div class="loading-progress" id="loadingProgress"></div>
+          </div>
+        </div>
+
+        <div class="result-display" id="resultDisplay">
+          <div class="result-label">Execution Result</div>
+          <div class="result-value" id="resultValue">Awaiting input...</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="digitCount">0</div>
+            <div class="stat-label">Digits</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="trailingZeros">0</div>
+            <div class="stat-label">Trailing Zeros</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="computationTime">0ms</div>
+            <div class="stat-label">Compute Time</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visualization-section">
+        <span class="section-label">// Algorithm Visualization</span>
+        <div class="viz-canvas" id="vizContainer">
+          <canvas id="algoViz"></canvas>
+          <div class="step-counter" id="stepCounter">Step: 0/0</div>
+        </div>
+
+        <span class="section-label">// Source Code</span>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div id="codeDisplay">
+            <span class="keyword">function</span> <span class="function">factorial</span>(n) {<br>
+            &nbsp;&nbsp;<span class="keyword">if</span> (n === <span class="number">0</span> || n === <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;<br>
+            &nbsp;&nbsp;<span class="keyword">let</span> result = <span class="number">1</span>;<br>
+            &nbsp;&nbsp;<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i <= n; i++) {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;result *= i;<br>
+              &nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;<span class="keyword">return</span> result;<br>
+              }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
